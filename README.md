@@ -56,9 +56,11 @@ Where I deviated fromt he instructions is that instead of subscribing to SMS eve
 
 <img src="https://dev.azure.com/caredotcoach/44e083c5-7621-4f40-b2dc-1e311acaccbe/_apis/git/repositories/00f667d1-732b-4049-94f7-b9411ada2eab/items?path=/sample_data/StorageQueue.png&versionDescriptor%5BversionOptions%5D=0&versionDescriptor%5BversionType%5D=0&versionDescriptor%5Bversion%5D=9325-proactive&resolveLfs=true&%24format=octetStream&api-version=5.0">
 
-5. Go to Home -> Storage accounts -> Name of Storage account (prodcaredotcoachsignals in above example) -> Data Storage (in left menu column) -> Queues -> name of Queue (client-sms in example) to see the incoming messages sent to your API phone number
+5. Create new queue and name it if you havent already, or Select existing queue
 
-6. To get the [Storage account connection string, which you need to programmatically receive messeages via Python](https://learn.microsoft.com/en-us/azure/storage/queues/storage-python-how-to-use-queue-storage?tabs=python%2Cenvironment-variable-windows). Go to Home -> Storage accounts -> Name of Storage account (...signals in above example) -> Security + Networking -> Access Keys. You will also need the name of Queue (client-sms in example). `queue_name = "client-sms"`
+6. Go to Home -> Storage accounts -> Name of Storage account (prodcaredotcoachsignals in above example) -> Data Storage (in left menu column) -> Queues -> name of Queue (client-sms in example) to see the incoming messages sent to your API phone number
+
+7. To get the [Storage account connection string, which you need to programmatically receive messeages via Python](https://learn.microsoft.com/en-us/azure/storage/queues/storage-python-how-to-use-queue-storage?tabs=python%2Cenvironment-variable-windows). Go to Home -> Storage accounts -> Name of Storage account (...signals in above example) -> Security + Networking -> Access Keys. You will also need the name of Queue (client-sms in example). `queue_name = "client-sms"`
 
 The storage connection string has the form
 
