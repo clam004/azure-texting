@@ -54,7 +54,7 @@ Where I deviated fromt he instructions is that instead of subscribing to SMS eve
 
 4. When you `Select an endpoint` for your Storage Queue you will be brought to this image
 
-<img src="samples/StorageQueues.png">
+<img src="samples/StorageQueue.png">
 
 5. Create new queue and name it if you havent already, or Select existing queue
 
