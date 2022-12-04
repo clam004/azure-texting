@@ -58,7 +58,7 @@ Where I deviated fromt he instructions is that instead of subscribing to SMS eve
 
 5. Go to Home -> Storage accounts -> Name of Storage account (prodcaredotcoachsignals in above example) -> Data Storage (in left menu column) -> Queues -> name of Queue (client-sms in example) to see the incoming messages sent to your API phone number
 
-6. To get the [Storage account connection string, which you need to programmatically receive messeages via Python](https://learn.microsoft.com/en-us/azure/storage/queues/storage-python-how-to-use-queue-storage?tabs=python%2Cenvironment-variable-windows). Go to Home -> Storage accounts -> Name of Storage account (prodcaredotcoachsignals in above example) -> Security + Networking -> Access Keys. You will also need the name of Queue (client-sms in example). `queue_name = "client-sms"`
+6. To get the [Storage account connection string, which you need to programmatically receive messeages via Python](https://learn.microsoft.com/en-us/azure/storage/queues/storage-python-how-to-use-queue-storage?tabs=python%2Cenvironment-variable-windows). Go to Home -> Storage accounts -> Name of Storage account (...signals in above example) -> Security + Networking -> Access Keys. You will also need the name of Queue (client-sms in example). `queue_name = "client-sms"`
 
 The storage connection string has the form
 
