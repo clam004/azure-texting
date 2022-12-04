@@ -42,7 +42,7 @@ Follow these steps to get to the image below:
 5. Find Microsoft.EventGrid.
 6. If your resource provider isn't registered, select Register.
 
-<img src="https://dev.azure.com/caredotcoach/44e083c5-7621-4f40-b2dc-1e311acaccbe/_apis/git/repositories/00f667d1-732b-4049-94f7-b9411ada2eab/items?path=/sample_data/EVENTGRID.png&versionDescriptor%5BversionOptions%5D=0&versionDescriptor%5BversionType%5D=0&versionDescriptor%5Bversion%5D=9325-proactive&resolveLfs=true&%24format=octetStream&api-version=5.0">
+<img src="samples/EVENTGRID.png">
 
 Where I deviated fromt he instructions is that instead of subscribing to SMS events using Endpoint Type `Web Hook` I used `Storage Queues`. 
 
@@ -54,7 +54,7 @@ Where I deviated fromt he instructions is that instead of subscribing to SMS eve
 
 4. When you `Select an endpoint` for your Storage Queue you will be brought to this image
 
-<img src="https://dev.azure.com/caredotcoach/44e083c5-7621-4f40-b2dc-1e311acaccbe/_apis/git/repositories/00f667d1-732b-4049-94f7-b9411ada2eab/items?path=/sample_data/StorageQueue.png&versionDescriptor%5BversionOptions%5D=0&versionDescriptor%5BversionType%5D=0&versionDescriptor%5Bversion%5D=9325-proactive&resolveLfs=true&%24format=octetStream&api-version=5.0">
+<img src="samples/StorageQueues.png">
 
 5. Create new queue and name it if you havent already, or Select existing queue
 
