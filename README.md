@@ -32,8 +32,11 @@ sms_responses = sms_client.send(
 
 Upon Creating a Webhook, Azure will send a validation code to the endpoint you indicate. 
 So you need to have an active endpoint ready to receive that handshake before you create your endpoint.
-<img src="samples/CREATEEVENT.png">
+
 <img src="samples/ENDPOINT.png">
+
+<img src="samples/CREATEEVENT.png">
+
 ```python
 
 # handshake.py
