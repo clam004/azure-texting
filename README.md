@@ -76,7 +76,7 @@ if __name__ == '__main__':
     # on the local development server.
     app.run(
         host='0.0.0.0', 
-        port=5001, 
+        port=8889, 
         ssl_context=('/path/to/cert.crt','/path/to/server.key')
     )
     
