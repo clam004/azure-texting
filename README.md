@@ -34,7 +34,7 @@ Upon Creating a Webhook, Azure will send a validation code to the endpoint you i
 So you need to have an active endpoint ready to receive that handshake before you create your endpoint.
 
 <p float="left">
-  <img src="samples/ENDPOINT.png" height=700 width=500> 
+  <img src="samples/ENDPOINT.png" height=600 width=450> 
   <img src="samples/CREATEEVENT.png" height=600 width=400>
 </p>
 
