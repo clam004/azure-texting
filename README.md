@@ -28,8 +28,64 @@ sms_responses = sms_client.send(
     tag="custom-tag-1"
 ) # optional property
 ```
+### Receive Text SMS Azure using Webhooks
 
-### Receive Text SMS Azure 
+Upon Creating a Webhook, Azure will send a validation code to the endpoint you indicate. 
+So you need to have an active endpoint ready to receive that handshake before you create your endpoint.
+<img src="samples/CREATEEVENT.png">
+<img src="samples/ENDPOINT.png">
+```python
+
+# handshake.py
+
+import requests
+
+from flask import Flask, request
+
+# Flask constructor takes the name of
+# current module (__name__) as argument.
+app = Flask(__name__)
+app.debug = True
+# The route() function of the Flask class is a decorator,
+# which tells the application which URL should call the associated function.
+
+@app.route('/webhook', methods=['POST', 'GET'])
+def webhook():
+
+    data = request.get_json()
+    print("data\n\n",data,"\n\n")
+
+    if 'validationCode' in data[0]['data']:
+        validationCode = data[0]['data']['validationCode']
+        print('validationCode found, initiate handshake ')
+        myresponse = {'validationResponse': validationCode}
+        json_object = json.dumps(myresponse, indent = 4)
+        print("json_object\n\n",json_object,"\n\n")
+        return json_object
+    else:
+        print('what is this?')
+        return {'confirmed': 'confirmed'}
+        
+# main driver function
+if __name__ == '__main__':
+    
+    # run() method of Flask class runs the application
+    # on the local development server.
+    app.run(
+        host='0.0.0.0', 
+        port=5001, 
+        ssl_context=('/path/to/cert.crt','/path/to/server.key')
+    )
+    
+
+# https://your.domain.com:8889/webhook
+```
+
+```console
+python handshake.py
+```
+
+### Receive Text SMS Azure using Storage Queue
 
 To receive text messages you need an [Event Grid and to Subscribe to SMS events](https://learn.microsoft.com/en-us/azure/communication-services/quickstarts/sms/handle-sms-events). 
 
